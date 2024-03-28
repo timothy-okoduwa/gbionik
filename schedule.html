@@ -4,7 +4,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
+        <title>Gbionik-Early cancer detection for you and your loved ones</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,107 +30,170 @@
         <link rel="stylesheet" href="./assets/stylesheet/style.css">
     </head>
 
-    <body>
-        <section>
-            <nav class="navbar navbar-expand-lg bg-transparent pt-4 pb-4">
-                <div class="container">
-                    <a class="navbar-brand" href="/">
-                        <img src="./assets/images/logos.svg
-                        " alt="">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 tunde">
-                            <li class="nav-item">
-                                <a href="./login.html">
-                                    <button class="Login">Login</button>
-                                </a>
 
-                            </li>
+    <nav class="navbar navbar-expand-lg bg-transparent pt-4 pb-4">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="./assets/images/logos.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 tunde">
+                    <li class="nav-item">
+                        <a href="./login.html">
+                            <button class="Login">Login</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="Schedule">Schedule blood draw</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-
-                            <li class="nav-item">
-                                <button class="Schedule">Schedule blood draw</button>
-                            </li>
-                        </ul>
-
-                    </div>
+    <div class="drewthelie">
+        <div class="barrq">
+            <div class="fhyeeu">
+                <div class="lavell">Full name</div>
+                <div>
+                    <input type="text" class="cherry" id="full-name" placeholder="Enter full name">
                 </div>
-            </nav>
-        </section>
-
-        <div class="drewthelie">
-            <div class="barrq">
-
-                <div class="fhyeeu">
-                    <div class="lavell">Full name</div>
-                    <div>
-                        <input type="email" class="cherry" placeholder="Enter full name">
-                    </div>
+            </div>
+            <div class="fhyeeu">
+                <div class="lavell">Email</div>
+                <div>
+                    <input type="email" class="cherry" id="email" placeholder="Enter email">
                 </div>
-                <div class="fhyeeu">
-                    <div class="lavell">Email</div>
-                    <div>
-                        <input type="email" class="cherry" placeholder="Enter email">
-                    </div>
+            </div>
+            <div class="fhyeeu">
+                <div class="lavell">Location</div>
+                <div>
+                    <select class="cherry" id="location">
+                        <option value="">Select location</option>
+                        <option value="location1">Location 1</option>
+                        <option value="location2">Location 2</option>
+                        <option value="location3">Location 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
                 </div>
-                <div class="fhyeeu">
-                    <div class="lavell">Location</div>
-                    <div>
-                        <select class="cherry">
-                            <option value="location1">Location 1</option>
-                            <option value="location2">Location 2</option>
-                            <option value="location3">Location 3</option>
-                            <!-- Add more options as needed -->
-                        </select>
-                    </div>
+            </div>
+            <div class="fhyeeu">
+                <div class="lavell">Package</div>
+                <div>
+                    <select class="cherry" id="package">
+                        <option value="">Select package</option>
+                        <option value="package1">Package 1</option>
+                        <option value="package2">Package 2</option>
+                        <option value="package3">Package 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
                 </div>
-
-                <div class="fhyeeu">
-                    <div class="lavell">Package</div>
-                    <div>
-                        <select class="cherry">
-                            <option value="package1">Package 1</option>
-                            <option value="package2">Package 2</option>
-                            <option value="package3">Package 3</option>
-                            <!-- Add more options as needed -->
-                        </select>
-                    </div>
+            </div>
+            <div class="fhyeeu">
+                <div class="lavell">Select payment method</div>
+                <div>
+                    <select class="cherry" id="payment-method">
+                        <option value="">Select payment method</option>
+                        <option value="method1">Method 1</option>
+                        <option value="method2">Method 2</option>
+                        <option value="method3">Method 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
                 </div>
-
-                <div class="fhyeeu">
-                    <div class="lavell">Select payment method</div>
-                    <div>
-                        <select class="cherry">
-                            <option value="method1">Method 1</option>
-                            <option value="method2">Method 2</option>
-                            <option value="method3">Method 3</option>
-                            <!-- Add more options as needed -->
-                        </select>
-                    </div>
+            </div>
+            <div class="fhyeeu">
+                <div class="lavell">Mobile money number</div>
+                <div>
+                    <input type="text" class="cherry" id="mobile-money" placeholder="Enter mobile money number">
                 </div>
-
-                <div class="fhyeeu">
-                    <div class="lavell">Mobile money number</div>
-                    <div>
-                        <input type="email" class="cherry" placeholder="Enter mobile money number">
-                    </div>
-                </div>
-                <div class="fhyeeu">
-                    <div>
-                        <button class="Login2">Confirm</button>
-                    </div>
+            </div>
+            <div class="fhyeeu">
+                <div>
+                    <button class="Login2" id="confirm-button" disabled id="confirm-button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Confirm</button>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="d-flex justify-content-center">
+                    <div><svg width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="38.5" cy="38.5" r="38.5" fill="#057A18" />
+                            <path d="M21.6562 40.9062L32.8854 52.1354L55.3437 28.0729" stroke="white" stroke-width="4"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="succs">
+                    <span>Successful payment</span>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="yourwss">
+                        <span>Your payment ID: 325689765485 has been processed successfully. your account
+                            has been debited in the amount of</span>
+                    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+                </div>
+                <div class="djueuo">
+                    <span>354,000 FCFA</span>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                    <a href="/">
+                        <button class="Login5">Go to Home page</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Get references to all input and select elements
+        const fullNameInput = document.getElementById('full-name');
+        const emailInput = document.getElementById('email');
+        const locationSelect = document.getElementById('location');
+        const packageSelect = document.getElementById('package');
+        const paymentMethodSelect = document.getElementById('payment-method');
+        const mobileMoneyInput = document.getElementById('mobile-money');
+
+        // Get reference to the confirm button
+        const confirmButton = document.getElementById('confirm-button');
+
+        // Function to check if any field is empty
+        function checkEmptyFields() {
+            // Check if any of the fields are empty
+            const isEmpty = fullNameInput.value === '' ||
+                emailInput.value === '' ||
+                locationSelect.value === '' ||
+                packageSelect.value === '' ||
+                paymentMethodSelect.value === '' ||
+                mobileMoneyInput.value === '';
+
+            // Disable or enable the confirm button based on the result
+            confirmButton.disabled = isEmpty;
+        }
+
+        // Add event listeners to all input and select elements to check for changes
+        fullNameInput.addEventListener('input', checkEmptyFields);
+        emailInput.addEventListener('input', checkEmptyFields);
+        locationSelect.addEventListener('change', checkEmptyFields);
+        packageSelect.addEventListener('change', checkEmptyFields);
+        paymentMethodSelect.addEventListener('change', checkEmptyFields);
+        mobileMoneyInput.addEventListener('input', checkEmptyFields);
+    </script>
+
+
     </body>
 
 </html>
