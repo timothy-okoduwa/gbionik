@@ -123,6 +123,49 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content p-4">
                 <div class="d-flex justify-content-center">
+                    <div><svg width="78" height="78" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M77.4255 39.0594C77.4255 60.2485 60.2484 77.4257 39.0592 77.4257C17.8701 77.4257 0.692871 60.2485 0.692871 39.0594C0.692871 17.8702 17.8701 0.693054 39.0592 0.693054C60.2484 0.693054 77.4255 17.8702 77.4255 39.0594ZM9.8247 39.0594C9.8247 55.2052 22.9134 68.2939 39.0592 68.2939C55.205 68.2939 68.2937 55.2052 68.2937 39.0594C68.2937 22.9136 55.205 9.82488 39.0592 9.82488C22.9134 9.82488 9.8247 22.9136 9.8247 39.0594Z"
+                                fill="url(#paint0_angular_316_93)" />
+                            <defs>
+                                <radialGradient id="paint0_angular_316_93" cx="0" cy="0" r="1"
+                                    gradientUnits="userSpaceOnUse"
+                                    gradientTransform="translate(39.0592 39.0594) rotate(90) scale(38.3663)">
+                                    <stop stop-color="#438B42" />
+                                    <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
+                        </svg>
+
+
+
+                    </div>
+                </div>
+                <div class="succs">
+                    <span>Transaction Initiated</span>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="yourwss">
+                        <span>You will receive a notification on your phone from <b>Gbionik</b> to withdraw</span>
+                    </div>
+
+                </div>
+                <div class="djueuo">
+                    <span>354,000 FCFA</span>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="yourwss">
+                        <span>Please dial *126# to approve the transaction</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="d-flex justify-content-center">
                     <div><svg width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="38.5" cy="38.5" r="38.5" fill="#057A18" />
                             <path d="M21.6562 40.9062L32.8854 52.1354L55.3437 28.0729" stroke="white" stroke-width="4"
@@ -158,19 +201,35 @@
         crossorigin="anonymous"></script>
 
     <script>
-        // Get references to all input and select elements
-        const fullNameInput = document.getElementById('full-name');
-        const emailInput = document.getElementById('email');
-        const locationSelect = document.getElementById('location');
-        const packageSelect = document.getElementById('package');
-        const paymentMethodSelect = document.getElementById('payment-method');
-        const mobileMoneyInput = document.getElementById('mobile-money');
-
         // Get reference to the confirm button
         const confirmButton = document.getElementById('confirm-button');
 
+        // Function to show the first modal and then show the second modal after 5 seconds
+        function showModals() {
+            // Show the first modal
+            const exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+            exampleModal.show();
+
+            // Show the second modal after 5 seconds
+            setTimeout(() => {
+                const exampleModal2 = new bootstrap.Modal(document.getElementById('exampleModal2'));
+                exampleModal2.show();
+            }, 5000);
+        }
+
+        // Add event listener to the confirm button
+        confirmButton.addEventListener('click', showModals);
+
         // Function to check if any field is empty
         function checkEmptyFields() {
+            // Get references to all input and select elements
+            const fullNameInput = document.getElementById('full-name');
+            const emailInput = document.getElementById('email');
+            const locationSelect = document.getElementById('location');
+            const packageSelect = document.getElementById('package');
+            const paymentMethodSelect = document.getElementById('payment-method');
+            const mobileMoneyInput = document.getElementById('mobile-money');
+
             // Check if any of the fields are empty
             const isEmpty = fullNameInput.value === '' ||
                 emailInput.value === '' ||
@@ -184,13 +243,14 @@
         }
 
         // Add event listeners to all input and select elements to check for changes
-        fullNameInput.addEventListener('input', checkEmptyFields);
-        emailInput.addEventListener('input', checkEmptyFields);
-        locationSelect.addEventListener('change', checkEmptyFields);
-        packageSelect.addEventListener('change', checkEmptyFields);
-        paymentMethodSelect.addEventListener('change', checkEmptyFields);
-        mobileMoneyInput.addEventListener('input', checkEmptyFields);
+        document.getElementById('full-name').addEventListener('input', checkEmptyFields);
+        document.getElementById('email').addEventListener('input', checkEmptyFields);
+        document.getElementById('location').addEventListener('change', checkEmptyFields);
+        document.getElementById('package').addEventListener('change', checkEmptyFields);
+        document.getElementById('payment-method').addEventListener('change', checkEmptyFields);
+        document.getElementById('mobile-money').addEventListener('input', checkEmptyFields);
     </script>
+
 
 
     </body>
