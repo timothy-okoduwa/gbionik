@@ -166,32 +166,42 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content p-4">
                 <div class="d-flex justify-content-center">
-                    <div><svg width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="38.5" cy="38.5" r="38.5" fill="#057A18" />
-                            <path d="M21.6562 40.9062L32.8854 52.1354L55.3437 28.0729" stroke="white" stroke-width="4"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                    <div><svg width="108px" height="108px" viewBox="-5.18 -5.18 24.36 24.36"
+                            xmlns="http://www.w3.org/2000/svg" fill="#e60505" stroke="#e60505" stroke-width="0.00014">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g fill-rule="evenodd">
+                                    <path d="M0 7a7 7 0 1 1 14 0A7 7 0 0 1 0 7z"></path>
+                                    <path d="M13 7A6 6 0 1 0 1 7a6 6 0 0 0 12 0z" fill="#FFF"
+                                        style="fill: var(--svg-status-bg, #fff);"></path>
+                                    <path
+                                        d="M7 5.969L5.599 4.568a.29.29 0 0 0-.413.004l-.614.614a.294.294 0 0 0-.004.413L5.968 7l-1.4 1.401a.29.29 0 0 0 .004.413l.614.614c.113.114.3.117.413.004L7 8.032l1.401 1.4a.29.29 0 0 0 .413-.004l.614-.614a.294.294 0 0 0 .004-.413L8.032 7l1.4-1.401a.29.29 0 0 0-.004-.413l-.614-.614a.294.294 0 0 0-.413-.004L7 5.968z">
+                                    </path>
+                                </g>
+                            </g>
                         </svg>
                     </div>
                 </div>
                 <div class="succs">
-                    <span>Successful payment</span>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <div class="yourwss">
-                        <span>Your payment ID: 325689765485 has been processed successfully. your account
-                            has been debited in the amount of</span>
-                    </div>
-
+                    <span>payment Failed</span>
                 </div>
                 <div class="djueuo">
                     <span>354,000 FCFA</span>
                 </div>
-                <div class="d-flex justify-content-center mt-3">
+                <div class="d-flex justify-content-center">
+                    <div class="yourwss">
+                        <span>Your payment ID: 325689765485 has Failed due to Mobile operator downtime</span>
+                    </div>
+
+                </div>
+
+                <!-- <div class="d-flex justify-content-center mt-3">
                     <a href="/">
                         <button class="Login5">Go to Home page</button>
                     </a>
 
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -199,21 +209,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
     <script>
         // Get reference to the confirm button
         const confirmButton = document.getElementById('confirm-button');
 
+        // Variables to store references to modals
+        let exampleModal;
+        let exampleModal2;
+
+        // Function to initialize modals
+        function initializeModals() {
+            exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+            exampleModal2 = new bootstrap.Modal(document.getElementById('exampleModal2'));
+        }
+
         // Function to show the first modal and then show the second modal after 5 seconds
         function showModals() {
             // Show the first modal
-            const exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'));
             exampleModal.show();
 
             // Show the second modal after 5 seconds
             setTimeout(() => {
-                const exampleModal2 = new bootstrap.Modal(document.getElementById('exampleModal2'));
-                exampleModal2.show();
+                exampleModal.hide(); // Hide the first modal
+                exampleModal2.show(); // Show the second modal
             }, 5000);
         }
 
@@ -249,7 +267,11 @@
         document.getElementById('package').addEventListener('change', checkEmptyFields);
         document.getElementById('payment-method').addEventListener('change', checkEmptyFields);
         document.getElementById('mobile-money').addEventListener('input', checkEmptyFields);
+
+        // Initialize modals when the document is ready
+        document.addEventListener('DOMContentLoaded', initializeModals);
     </script>
+
 
 
 
