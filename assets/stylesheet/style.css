@@ -621,6 +621,46 @@
   color: #111010;
 }
 @media screen and (max-width: 991px) {
+  .wjduya {
+    background-image: url('../images/image\ 3.png');
+    background-position: center;
+    background-size: cover;
+    margin-top: -120px;
+    padding-top: 150px;
+    padding-bottom: 40px;
+  }
+  .hfu {
+    margin-top: 2px !important;
+    /* background-color: red; */
+  }
+  .jass {
+    border-radius: 20px;
+    padding: 25px;
+    min-height: fit-content !important;
+
+    background-color: #fffaf6;
+  }
+  .jass2 {
+    border-radius: 20px;
+    padding: 25px;
+    min-height: fit-content !important;
+
+    background-color: #fef3f6;
+  }
+  .jass3 {
+    border-radius: 20px;
+    padding: 25px;
+    min-height: fit-content !important;
+
+    background-color: #e3e9f1;
+  }
+  .jass4 {
+    border-radius: 20px;
+    padding: 25px;
+    min-height: fit-content !important;
+
+    background-color: #e8f3f2;
+  }
   .barrq {
     width: 90%;
   }
