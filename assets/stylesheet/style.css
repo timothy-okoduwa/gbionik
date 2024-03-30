@@ -621,6 +621,12 @@
   color: #111010;
 }
 @media screen and (max-width: 991px) {
+  .sepre {
+    /* */
+    padding: 30px;
+    min-height: fit-content !important;
+    border-radius: 12px;
+  }
   .wjduya {
     background-image: url('../images/image\ 3.png');
     background-position: center;
@@ -636,29 +642,33 @@
   .jass {
     border-radius: 20px;
     padding: 25px;
-    min-height: fit-content !important;
-
+    min-height: 300px !important;
+    display: flex;
+    align-items: center;
     background-color: #fffaf6;
   }
   .jass2 {
     border-radius: 20px;
     padding: 25px;
-    min-height: fit-content !important;
-
+    min-height: 300px !important;
+    display: flex;
+    align-items: center;
     background-color: #fef3f6;
   }
   .jass3 {
     border-radius: 20px;
     padding: 25px;
-    min-height: fit-content !important;
-
+    min-height: 300px !important;
+    display: flex;
+    align-items: center;
     background-color: #e3e9f1;
   }
   .jass4 {
     border-radius: 20px;
     padding: 25px;
-    min-height: fit-content !important;
-
+    min-height: 300px !important;
+    display: flex;
+    align-items: center;
     background-color: #e8f3f2;
   }
   .barrq {
